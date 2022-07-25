@@ -1,0 +1,24 @@
+## Hadoop Common
+1. CLI mini cluster
+2. Native Libraries
+3. Proxy User
+4. Rack Awareness
+5. Secure Mode
+6. Service Level Authorization 초기 부여 메커니즘
+7. Http Authentication
+8. Credential Provider API
+9. Hadoop KMS
+10. Tracing
+11. Unix Shell Guide
+
+## Hadoop Distributed File System(HDFS)
+1. 유기적, 조직적 블럭 형태로 움직임
+2. 투명하게 복제되어 흩어짐
+3. 인텔리젠트 복제 메커니즘을 가지고 있음(데이터를 복수의 렉 형태로 구성된 노드들에 옮겨짐)
+
+하둡의 디자인
+1. 파일 순차적으로 읽어 풀 스캐닝
+2. 노드들안에 데이터 각각을 뒤져 노드안에서 연산하는 방식을 취함
+3. 노드 연산 수행에 장애가 발생할 경우 하드웨어를 교체하기보다 소프트웨어 레이어에서 교체
+
+하둡 클러스터안에 네임노드를 복제한 여러 데이터 노드들이 존재, 하둡 클러스터는 여러개일 수 있음
