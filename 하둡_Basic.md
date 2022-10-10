@@ -60,5 +60,14 @@ Plan, Execute, query process
 2. Disk Balancer - 싱글 데이터 노드 내에 디스크 저장
 3. Mover - 스토리지 타입을 실제 이동시킴
 
+### HDFS : Master-Slave Architecture
+1. Master node(NameNode) : 파일시스템 namespace를 관리하는일, 고가용성 서버
+2. Slave node : 비즈니스 데이터 저장
+3. Hdfs Clients에 의해 요구되는 사항을, data node는 master node인 name node의 지배를 받아 작업을 부여받아 피드백까지 제출
 
+### Rack/Block in Hadoop Cluster(렉 인지)
+1. text file -> dividing the text files by 3 replcas -> block a, block b, block c
+   1. 한 클러스트 안에 같은 데이터 노드들에는 레플리카 하나 이상이 중복되면 안됨
+   2. 싱글 블럭내에 두개의 레플리카들이 같은 렉안에 허용되지 않음
+   3. 렉들의 수 들은, 렉 인지 정책에 입각하여 하둡 클러스터내에 레플리카 수들보다 작아야됨
 
